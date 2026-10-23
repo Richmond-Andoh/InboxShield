@@ -106,12 +106,12 @@ def render(
         {
             "Invoice": item["invoice_id"],
             "Vendor": item.get("invoice_vendor") or "-",
-            "Amount": (item.get("amount_minor") or 0) / 100
+            "Amount": int(float(item.get("amount_minor") or 0)) / 100
             if item.get("amount_minor") is not None
             else None,
             "Currency": item.get("currency") or "-",
             "Matched": item.get("matched_invoice_id") or "-",
-            "Matched amount": (item.get("matched_amount") or 0) / 100
+            "Matched amount": int(float(item.get("matched_amount") or 0)) / 100
             if item.get("matched_amount") is not None
             else None,
             "Signal": item["finding_type"].replace("_", " ").title(),
