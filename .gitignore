@@ -1,0 +1,48 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Databases and runtime state (never commit financial data)
+data/
+!data/.gitkeep
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+!logs/.gitkeep
+*.log
+
+# Financial documents and generated demo data
+incoming_invoices/*
+!incoming_invoices/.gitkeep
+processed_invoices/*
+!processed_invoices/.gitkeep
+DEMO-*
+*.pdf
+*.PDF
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
